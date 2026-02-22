@@ -4,19 +4,146 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>EchoSight | Bat Survey Support & Ecological Analysis | Newbury, Berkshire</title>
-    <meta name="description" content="Specialist bat survey support and ecological analysis for UK consultancies. PRA, emergence surveys, acoustic analysis, and thermal review. Based in Newbury, Berkshire. UK-wide remote analysis." />
-    <meta name="author" content="EchoSight" />
-    <meta property="og:title" content="EchoSight — Bat Survey Support & Ecological Analysis" />
-    <meta property="og:description" content="Specialist bat survey support for UK ecological consultancies. Ecologist-led, QA-driven, built around your deadlines." />
-    <meta property="og:type" content="website" />
-
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@Lovable" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <meta
+      name="description"
+      content="Specialist bat survey support and ecological analysis for UK consultancies. PRA, emergence surveys, acoustic analysis, and thermal review. Based in Newbury, Berkshire. UK-wide remote analysis."
+    />
+    <link rel="stylesheet" href="./styles.css" />
   </head>
-
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <header class="site-header">
+      <div class="container nav">
+        <a href="#" class="logo"><span>Echo</span>Sight</a>
+        <button id="menuBtn" class="menu-btn" aria-label="Toggle menu">☰</button>
+        <nav id="navLinks" class="nav-links">
+          <a href="#services">Services</a>
+          <a href="#process">How It Works</a>
+          <a href="#deliverables">Deliverables</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="overlay"></div>
+        <div class="container hero-content">
+          <p class="eyebrow">Ecological Consultancy Support</p>
+          <h1>Bat survey support, powered by precision.</h1>
+          <p class="lead">
+            Specialist bat analysis and field support for UK ecological consultancies.
+            Ecologist-led, QA-driven, and built around your deadlines.
+          </p>
+          <div class="actions">
+            <a class="btn" href="#contact">Request Availability</a>
+            <a class="btn btn-outline" href="#services">View Services</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="trust-row">
+        <div class="container trust-items">
+          <span>🦇 Bat Specialist</span>
+          <span>✅ Ecologist-led QA</span>
+          <span>📡 UK-wide Remote Analysis</span>
+          <span>📍 Newbury, Berkshire</span>
+        </div>
+      </section>
+
+      <section id="services" class="section container">
+        <div class="section-head center">
+          <p class="eyebrow">What We Do</p>
+          <h2>Specialist Bat Services</h2>
+          <p>From fieldwork to data processing, we provide support for high-quality bat survey outputs.</p>
+        </div>
+        <div class="grid three">
+          <article class="card"><h3>Preliminary Roost Assessment</h3><p>Building and tree inspections for bat roost potential with actionable recommendations.</p></article>
+          <article class="card"><h3>Emergence & Return Surveys</h3><p>Dusk/dawn survey support with experienced surveyors and full reporting.</p></article>
+          <article class="card"><h3>Static Detector Analysis</h3><p>Expert acoustic analysis with species ID and QA-checked activity summaries.</p></article>
+          <article class="card"><h3>Thermal / Video Review</h3><p>Ecologist-led review of infrared/video footage with behaviour tagging.</p></article>
+          <article class="card"><h3>Data & Process Support</h3><p>Standardised templates, QA checklists, and workflow tools for survey teams.</p></article>
+          <article class="card"><h3>Subcontract Surveyor Support</h3><p>Additional surveyor capacity during peak survey season.</p></article>
+        </div>
+      </section>
+
+      <section id="process" class="section alt">
+        <div class="container">
+          <div class="section-head center">
+            <p class="eyebrow">Simple Process</p>
+            <h2>How It Works</h2>
+            <p>Clear steps, predictable timelines, quality outputs.</p>
+          </div>
+          <div class="grid three steps">
+            <article><p class="step-num">01</p><h3>Brief</h3><p>Share project details, survey requirements, and timelines. We scope the work and confirm availability.</p></article>
+            <article><p class="step-num">02</p><h3>Survey or Analysis</h3><p>We carry out fieldwork or process your data using robust, repeatable methods with QA.</p></article>
+            <article><p class="step-num">03</p><h3>Deliverables</h3><p>Receive clear reports, data outputs, annotated media, and recommendations on time.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section id="deliverables" class="section container">
+        <div class="two-col">
+          <div>
+            <p class="eyebrow">What You Receive</p>
+            <h2>Clear, Professional Deliverables</h2>
+            <p class="muted">Every project comes with structured outputs for direct inclusion in reports—clean, clear, and QA-checked.</p>
+            <ul class="check-list">
+              <li>Species identification reports</li>
+              <li>Activity summary tables (CSV/Excel)</li>
+              <li>Annotated thermal/video clips</li>
+              <li>Bat roost assessment reports</li>
+              <li>QA-checked acoustic analysis</li>
+              <li>Recommendations for mitigation</li>
+            </ul>
+          </div>
+          <aside class="example">
+            <p class="tiny">Example Output</p>
+            <p><strong>Species:</strong> Common pipistrelle</p>
+            <p><strong>Passes:</strong> 247</p>
+            <p><strong>Period:</strong> June–September 2025</p>
+            <p><strong>Peak Activity:</strong> 22:15–23:30</p>
+            <p><strong>Confidence:</strong> High (manual QA)</p>
+            <p><strong>Status:</strong> Reviewed ✓</p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section alt">
+        <div class="container">
+          <div class="section-head center">
+            <p class="eyebrow">Client Feedback</p>
+            <h2>Trusted by Ecologists</h2>
+          </div>
+          <div class="grid three">
+            <article class="card quote"><p>“EchoSight turned around our acoustic analysis in 48 hours—the quality was exceptional.”</p><small>Senior Ecologist · Thames Valley Ecology Ltd</small></article>
+            <article class="card quote"><p>“PRA reports are consistently thorough and clearly written. Planners love the clarity.”</p><small>Director · Southern Counties Environmental</small></article>
+            <article class="card quote"><p>“Reliable subcontract support during survey season transformed our capacity planning.”</p><small>Project Manager · Berkshire Wildlife Consultants</small></article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section cta">
+        <div class="container center">
+          <h2>Ready to streamline your bat survey work?</h2>
+          <p class="muted">Get in touch to discuss your project requirements and check availability.</p>
+          <form id="contactForm" class="contact-form">
+            <input type="text" id="name" placeholder="Your name" required />
+            <input type="email" id="email" placeholder="you@company.co.uk" required />
+            <textarea id="message" rows="4" placeholder="Tell us about your project"></textarea>
+            <button class="btn" type="submit">Send Enquiry</button>
+          </form>
+          <p id="formMessage" class="form-message" aria-live="polite"></p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-row">
+        <p>© <span id="year"></span> EchoSight. All rights reserved.</p>
+        <p>hello@echosight.co.uk · Newbury, Berkshire, UK</p>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
   </body>
 </html>
