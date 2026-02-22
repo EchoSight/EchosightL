@@ -71,7 +71,7 @@ This repository includes a GitHub Actions workflow (`.github/workflows/static.ym
 If your Pages site was showing a blank screen before, the app is now configured for static hosting:
 
 - `HashRouter` is used for client-side navigation on GitHub Pages.
-- Vite `base` is set to `./` so asset paths resolve correctly under repository subpaths.
+- Vite `base` is set to `/EchosightL/` so built assets resolve correctly for the GitHub Pages project-site URL.
 
 ## Can I connect a custom domain to my Lovable project?
 
@@ -80,3 +80,16 @@ Yes, you can!
 To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
 
 Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+
+
+### Troubleshooting blank GitHub Pages screen
+
+If the deployed page source still contains `<script type="module" src="/src/main.tsx"></script>`, GitHub Pages is serving the repository root `index.html` instead of the built `dist/` artifact.
+
+To fix it:
+
+1. Go to **Settings → Pages** for the repo.
+2. Set **Build and deployment → Source** to **GitHub Actions**.
+3. Ensure the deploy workflow has run on your default branch (this workflow now runs on both `main` and `master`).
+
+Once Pages serves the workflow artifact, the app loads compiled assets instead of raw source TSX files.
