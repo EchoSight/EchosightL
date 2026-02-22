@@ -202,3 +202,56 @@ code, pre, .mono {
 @media (max-width: 860px) {
   .service-row { grid-template-columns: 1fr; gap: 1rem; }
 }
+
+/* Footer utility classes */
+.bg-accent { background: hsl(var(--accent)); }
+.text-accent-foreground { color: hsl(var(--accent-foreground)); }
+.mx-auto { margin-left: auto; margin-right: auto; }
+.px-4 { padding-left: 1rem; padding-right: 1rem; }
+.py-16 { padding-top: 4rem; padding-bottom: 4rem; }
+.grid-cols-1 { grid-template-columns: 1fr; }
+.gap-10 { gap: 2.5rem; }
+.text-xl { font-size: 1.25rem; line-height: 1.75rem; }
+.font-bold { font-weight: 700; }
+.tracking-tight { letter-spacing: -0.025em; }
+.mt-3 { margin-top: .75rem; }
+.text-sm { font-size: .875rem; line-height: 1.45; }
+.text-xs { font-size: .75rem; line-height: 1.2; }
+.leading-relaxed { line-height: 1.625; }
+.max-w-xs { max-width: 20rem; }
+.font-semibold { font-weight: 600; }
+.mb-4 { margin-bottom: 1rem; }
+.uppercase { text-transform: uppercase; }
+.tracking-wider { letter-spacing: .08em; }
+.flex { display: flex; }
+.flex-col { flex-direction: column; }
+.gap-2 { gap: .5rem; }
+.transition-colors { transition: color .2s ease; }
+.mt-2 { margin-top: .5rem; }
+.mt-12 { margin-top: 3rem; }
+.pt-8 { padding-top: 2rem; }
+.border-t { border-top: 1px solid; }
+.items-center { align-items: center; }
+.justify-between { justify-content: space-between; }
+.gap-4 { gap: 1rem; }
+.gap-6 { gap: 1.5rem; }
+.text-accent-foreground\/60 { color: hsl(var(--accent-foreground) / .6); }
+.text-accent-foreground\/70 { color: hsl(var(--accent-foreground) / .7); }
+.text-accent-foreground\/40 { color: hsl(var(--accent-foreground) / .4); }
+.border-accent-foreground\/10 { border-color: hsl(var(--accent-foreground) / .1); }
+.hover\:text-primary:hover { color: hsl(var(--primary)); }
+.hover\:text-accent-foreground\/70:hover { color: hsl(var(--accent-foreground) / .7); }
+.bg-accent a { color: inherit; text-decoration: none; }
+
+@media (min-width: 768px) {
+  .md\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (min-width: 640px) {
+  .sm\:flex-row { flex-direction: row; }
+}
+
+@media (min-width: 1024px) {
+  .lg\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .lg\:px-8 { padding-left: 2rem; padding-right: 2rem; }
+}
