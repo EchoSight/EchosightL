@@ -173,3 +173,32 @@ code, pre, .mono {
 @media (max-width: 860px) {
   .grid.four { grid-template-columns: 1fr; }
 }
+
+.services-stack { display: grid; gap: 1.5rem; }
+.service-row {
+  display: grid;
+  grid-template-columns: 1.2fr 1.8fr;
+  gap: 2rem;
+  padding: 1.5rem;
+  border: 1px solid hsl(var(--border));
+  border-radius: calc(var(--radius) + 8px);
+  background: hsl(var(--card));
+}
+.service-row + .service-row { border-top: 1px solid hsl(var(--border)); }
+.service-title {
+  margin: 0 0 .6rem;
+  font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+  font-weight: 700;
+  line-height: 1.25;
+}
+.service-price {
+  margin: .2rem 0 1rem;
+  color: hsl(var(--primary));
+  font-weight: 700;
+}
+.service-row h3 { margin: 0 0 .5rem; font-size: 1rem; text-transform: uppercase; letter-spacing: .06em; color: hsl(var(--muted-foreground)); }
+.service-row p { margin: .6rem 0; }
+
+@media (max-width: 860px) {
+  .service-row { grid-template-columns: 1fr; gap: 1rem; }
+}
