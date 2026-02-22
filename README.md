@@ -1,86 +1,47 @@
-# Welcome to your Lovable project
+# EchoSight website (GitHub Pages ready)
 
-## Project info
+This repository contains a like-for-like recreation of the full EchoSight marketing website, built as a static React site that can be hosted on GitHub Pages.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## What is included
 
-## How can I edit this code?
+- Full multi-page website experience via `HashRouter` routes:
+  - Home
+  - Services
+  - Pricing
+  - About
+  - Case Studies
+  - FAQ
+  - Contact
+  - Privacy
+  - Terms
+- Shared global layout components (header, footer, cookie consent, navigation).
+- Tailwind + shadcn UI styling.
+- Static GitHub Pages compatibility configured with:
+  - `base: "./"` in Vite config
+  - `HashRouter` for route compatibility without server rewrites
+  - GitHub Actions workflow at `.github/workflows/deploy.yml`
 
-There are several ways of editing your application.
+## Local development
 
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+```bash
+npm install
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+## Build
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```bash
+npm run build
+```
 
-**Use GitHub Codespaces**
+## Deploy to GitHub Pages
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+1. Push this repo to GitHub.
+2. In **Settings → Pages**, set Source to **GitHub Actions**.
+3. Push to `main`.
+4. The workflow in `.github/workflows/deploy.yml` will build and publish `dist/`.
 
-## What technologies are used for this project?
+## Notes
 
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-### GitHub Pages (static)
-
-This project is configured for static deployment on GitHub Pages:
-
-- Uses `HashRouter` so client-side routes work without server rewrites.
-- Uses `base: "./"` in Vite so assets resolve correctly on Pages.
-- Includes `.github/workflows/deploy.yml` to build and deploy on pushes to `main`.
-
-Steps:
-
-1. Push this repository to GitHub.
-2. In GitHub, open **Settings → Pages** and ensure **Source** is set to **GitHub Actions**.
-3. Push to `main` (or run the workflow manually from **Actions**).
-4. Your site will be published to your GitHub Pages URL.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+- The project intentionally uses hash-based routing for static hosting.
+- A duplicate Pages workflow was removed to avoid conflicting deploy jobs.
