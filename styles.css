@@ -255,3 +255,31 @@ code, pre, .mono {
   .lg\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
   .lg\:px-8 { padding-left: 2rem; padding-right: 2rem; }
 }
+
+.case-studies { gap: 1.4rem; }
+.case-study-card { padding: 1.5rem; border-radius: calc(var(--radius) + 8px); }
+.case-tags { display: flex; flex-wrap: wrap; gap: .45rem; margin-bottom: .9rem; }
+.case-tag {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: .2rem .65rem;
+  font-size: .74rem;
+  font-weight: 600;
+  color: hsl(var(--primary));
+  background: hsl(var(--primary) / .12);
+}
+.case-study-card h2 { margin-bottom: 1rem; font-size: clamp(1.35rem, 2.5vw, 1.9rem); }
+.case-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.4rem; }
+.case-study-card h3 {
+  margin: 0 0 .45rem;
+  font-size: .78rem;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: hsl(var(--muted-foreground));
+}
+.case-study-card p { margin: 0 0 1rem; color: hsl(var(--muted-foreground)); }
+
+@media (max-width: 860px) {
+  .case-grid { grid-template-columns: 1fr; }
+}
