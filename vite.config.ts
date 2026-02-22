@@ -5,7 +5,10 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: "./",
+  // GitHub Pages project site is served from /EchosightL/.
+  // Using an absolute base prevents asset URLs from breaking when the
+  // trailing slash is omitted from the page URL.
+  base: "/EchosightL/",
   server: {
     host: "::",
     port: 8080,
