@@ -64,6 +64,15 @@ This project is built with:
 
 Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
 
+### GitHub Pages deployment
+
+This repository includes a GitHub Actions workflow (`.github/workflows/static.yml`) that builds the Vite app and deploys the `dist/` output to GitHub Pages on every push to `main`.
+
+If your Pages site was showing a blank screen before, the app is now configured for static hosting:
+
+- `HashRouter` is used for client-side navigation on GitHub Pages.
+- Vite `base` is set to `./` so asset paths resolve correctly under repository subpaths.
+
 ## Can I connect a custom domain to my Lovable project?
 
 Yes, you can!
