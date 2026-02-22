@@ -62,20 +62,7 @@ This project is built with:
 
 ## How can I deploy this project?
 
-### GitHub Pages (static)
-
-This project is configured for static deployment on GitHub Pages:
-
-- Uses `HashRouter` so client-side routes work without server rewrites.
-- Uses `base: "./"` in Vite so assets resolve correctly on Pages.
-- Includes `.github/workflows/deploy.yml` to build and deploy on pushes to `main`.
-
-Steps:
-
-1. Push this repository to GitHub.
-2. In GitHub, open **Settings → Pages** and ensure **Source** is set to **GitHub Actions**.
-3. Push to `main` (or run the workflow manually from **Actions**).
-4. Your site will be published to your GitHub Pages URL.
+Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
 
 ## Can I connect a custom domain to my Lovable project?
 
