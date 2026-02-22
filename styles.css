@@ -71,3 +71,18 @@ input, textarea { width: 100%; border: 1px solid var(--line); border-radius: 10p
   .nav-links.open { display: flex; }
   .grid.three, .two-col { grid-template-columns: 1fr; }
 }
+
+
+.page-hero { padding: 5rem 0 3rem; background: radial-gradient(70% 100% at 50% 0%, #223447 0%, #0b1218 72%); }
+.page-stack { display: grid; gap: 1rem; }
+.grid.four { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+
+.footer-row a { color: var(--muted); text-decoration: none; }
+.footer-row a:hover { color: var(--text); }
+
+@media (max-width: 1000px) {
+  .grid.four { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 860px) {
+  .grid.four { grid-template-columns: 1fr; }
+}
