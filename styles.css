@@ -137,6 +137,68 @@ h2 { margin: 0 0 .8rem; font-size: clamp(1.6rem, 3vw, 2.4rem); }
 .card { background: hsl(var(--card)); color: hsl(var(--card-foreground)); border: 1px solid hsl(var(--border)); border-radius: calc(var(--radius) + 6px); padding: 1.1rem; }
 .card h3 { margin-top: 0; margin-bottom: .4rem; }
 .card p { margin: 0; color: hsl(var(--muted-foreground)); }
+
+
+.service-grid {
+  gap: 1.5rem;
+}
+
+.service-card {
+  display: block;
+  background: hsl(var(--card));
+  color: hsl(var(--card-foreground));
+  border: 1px solid hsl(var(--border));
+  border-radius: calc(var(--radius) + 4px);
+  padding: 1.5rem;
+  text-decoration: none;
+  transition: border-color .3s ease, box-shadow .3s ease, transform .3s ease;
+}
+
+.service-card:hover {
+  border-color: hsl(var(--primary) / .3);
+  box-shadow: 0 12px 24px hsl(var(--primary) / .08);
+  transform: translateY(-2px);
+}
+
+.service-icon {
+  color: hsl(var(--primary));
+  margin-bottom: 1rem;
+}
+
+.service-card h3 {
+  margin: 0 0 .5rem;
+  font-size: 1.1rem;
+  transition: color .3s ease;
+}
+
+.service-card:hover h3 {
+  color: hsl(var(--primary));
+}
+
+.service-card p {
+  margin: 0;
+  color: hsl(var(--muted-foreground));
+}
+
+.service-link {
+  margin-top: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: .25rem;
+  color: hsl(var(--primary));
+  font-size: .9rem;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity .25s ease;
+}
+
+.service-card:hover .service-link {
+  opacity: 1;
+}
+
+.service-chevron {
+  flex-shrink: 0;
+}
 .steps article { background: hsl(var(--card)); border: 1px dashed hsl(var(--border)); border-radius: calc(var(--radius) + 4px); padding: 1rem; }
 .step-num { margin: 0; font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 2rem; font-weight: 500; }
 
