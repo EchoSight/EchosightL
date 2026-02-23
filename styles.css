@@ -126,8 +126,9 @@ h2 { margin: 0 0 .8rem; font-size: clamp(1.6rem, 3vw, 2.4rem); }
 .btn-outline, .btn-secondary { background: hsl(var(--secondary)); color: hsl(var(--secondary-foreground)); border: 1px solid hsl(var(--border)); }
 
 .trust-row { background: hsl(var(--surface-cool)); border-top: 1px solid hsl(var(--border)); border-bottom: 1px solid hsl(var(--border)); }
-.trust-items { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.2rem 2rem; font-size: .93rem; padding: .95rem 0; color: hsl(var(--muted-foreground)); }
-.trust-items span { background: hsl(var(--badge-bg)); color: hsl(var(--badge-foreground)); border-radius: 999px; padding: .2rem .65rem; }
+.trust-items { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 1rem 2rem; font-size: .93rem; font-weight: 500; padding: 1.25rem 0; color: hsl(var(--muted-foreground)); }
+.trust-item { display: inline-flex; align-items: center; gap: .5rem; }
+.trust-icon { color: hsl(var(--primary)); flex-shrink: 0; }
 
 .section-head { margin-bottom: 2rem; }
 .section-head p { color: hsl(var(--muted-foreground)); margin: 0; }
