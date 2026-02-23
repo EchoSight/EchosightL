@@ -202,6 +202,17 @@ h2 { margin: 0 0 .8rem; font-size: clamp(1.6rem, 3vw, 2.4rem); }
 .card p { margin: 0; color: hsl(var(--muted-foreground)); }
 
 
+.approach-card {
+  padding-top: 1.5rem;
+}
+
+.approach-icon {
+  display: block;
+  margin: 0 auto .75rem;
+  color: hsl(var(--primary));
+}
+
+
 .service-grid {
   gap: 1.5rem;
 }
