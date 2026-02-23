@@ -123,8 +123,70 @@ h1 { margin: .5rem auto 1rem; max-width: 850px; font-size: clamp(2rem, 5vw, 3.7r
 h2 { margin: 0 0 .8rem; font-size: clamp(1.6rem, 3vw, 2.4rem); }
 .lead { margin: 0 auto; max-width: 760px; color: hsl(var(--hero-foreground) / 0.85); font-size: 1.1rem; }
 .actions { margin-top: 1.5rem; display: flex; justify-content: center; gap: .8rem; flex-wrap: wrap; }
-.btn { border: 1px solid hsl(var(--primary)); background: hsl(var(--primary)); color: hsl(var(--primary-foreground)); border-radius: var(--radius); font-weight: 700; text-decoration: none; padding: .72rem 1rem; cursor: pointer; }
-.btn-outline, .btn-secondary { background: hsl(var(--secondary)); color: hsl(var(--secondary-foreground)); border: 1px solid hsl(var(--border)); }
+.btn,
+.btn-outline,
+.btn-secondary,
+.menu-btn,
+.theme-btn {
+  transition: background-color .2s ease, color .2s ease, border-color .2s ease, box-shadow .2s ease, transform .2s ease;
+}
+
+.btn {
+  border: 1px solid hsl(var(--primary));
+  background: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  border-radius: var(--radius);
+  font-weight: 700;
+  text-decoration: none;
+  padding: .72rem 1rem;
+  cursor: pointer;
+  box-shadow: 0 10px 22px hsl(var(--primary) / .2);
+}
+
+.btn:hover {
+  background: hsl(var(--primary) / .9);
+  border-color: hsl(var(--primary) / .9);
+  box-shadow: 0 14px 28px hsl(var(--primary) / .28);
+  transform: translateY(-1px);
+}
+
+.btn-outline,
+.btn-secondary {
+  background: hsl(var(--secondary));
+  color: hsl(var(--secondary-foreground));
+  border: 1px solid hsl(var(--border));
+}
+
+.btn-outline:hover,
+.btn-secondary:hover {
+  background: hsl(var(--secondary) / .75);
+  border-color: hsl(var(--primary) / .35);
+  box-shadow: 0 10px 22px hsl(var(--foreground) / .1);
+  transform: translateY(-1px);
+}
+
+.menu-btn:hover,
+.theme-btn:hover {
+  background: hsl(var(--secondary));
+  border-color: hsl(var(--primary) / .35);
+  box-shadow: 0 8px 18px hsl(var(--foreground) / .12);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn,
+  .btn-outline,
+  .btn-secondary,
+  .menu-btn,
+  .theme-btn {
+    transition: none;
+  }
+
+  .btn:hover,
+  .btn-outline:hover,
+  .btn-secondary:hover {
+    transform: none;
+  }
+}
 
 .trust-row { background: hsl(var(--surface-cool)); border-top: 1px solid hsl(var(--border)); border-bottom: 1px solid hsl(var(--border)); }
 .trust-items { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 1rem 2rem; font-size: .93rem; font-weight: 500; padding: 1.25rem 0; color: hsl(var(--muted-foreground)); }
