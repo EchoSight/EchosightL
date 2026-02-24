@@ -89,7 +89,17 @@ body {
 
 .site-header { position: sticky; top: 0; z-index: 20; background: hsl(var(--background) / 0.92); backdrop-filter: blur(8px); border-bottom: 1px solid hsl(var(--border)); }
 .nav { min-height: 66px; display: flex; align-items: center; justify-content: space-between; }
-.logo { text-decoration: none; color: hsl(var(--foreground)); font-weight: 800; font-size: 1.2rem; display: inline-flex; align-items: center; gap: .55rem; }
+.logo {
+  text-decoration: none;
+  color: hsl(var(--foreground));
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  letter-spacing: -0.025em;
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+}
 .logo-mark { width: 30px; height: 30px; object-fit: contain; }
 .logo span, .eyebrow, .step-num, .check-list li::before { color: hsl(var(--primary)); }
 .nav-links { display: flex; gap: 1rem; }
