@@ -918,3 +918,44 @@ code, pre, .mono {
   color: hsl(var(--muted-foreground));
   font-size: .95rem;
 }
+
+/* Privacy policy page */
+.policy-stack {
+  gap: 1rem;
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.policy-card {
+  padding: 1.25rem;
+  border-radius: calc(var(--radius) + 4px);
+  background: hsl(var(--card));
+  box-shadow: none;
+}
+
+.policy-card h2 {
+  margin-bottom: .6rem;
+  padding-bottom: .4rem;
+  border-bottom: 1px solid hsl(var(--border));
+}
+
+.policy-card p {
+  line-height: 1.75;
+}
+
+.policy-card p + p {
+  margin-top: .5rem;
+}
+
+.policy-list {
+  display: grid;
+  gap: .4rem;
+}
+
+.policy-list li {
+  margin: 0;
+  padding: .25rem 0 .25rem .55rem;
+  border-left: 2px solid hsl(var(--primary) / .35);
+  background: transparent;
+}
+
