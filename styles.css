@@ -171,6 +171,19 @@ body {
   margin-left: -0.35rem;
 }
 
+.bg-accent .logo .gradient-text {
+  background-image: none;
+  color: #ed701d;
+}
+
+.bg-accent .logo span:last-child {
+  color: #fff;
+}
+
+.bg-accent .logo .gradient-text + span {
+  margin-left: -0.2rem;
+}
+
 .hero { position: relative; min-height: 76vh; display: grid; align-items: center; color: hsl(var(--hero-foreground)); }
 .overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(9,14,19,0.2), rgba(9,14,19,0.85)); }
 .hero-content { position: relative; z-index: 1; text-align: center; padding: 7rem 0 5rem; }
