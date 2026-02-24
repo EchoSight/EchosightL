@@ -164,7 +164,11 @@ body {
 }
 
 .site-header .logo span:last-child {
-  color: #fff;
+  color: hsl(var(--foreground));
+}
+
+.site-header.on-hero .logo span:last-child {
+  color: hsl(var(--hero-foreground));
 }
 
 .site-header .logo .gradient-text + span {
