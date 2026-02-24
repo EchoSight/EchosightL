@@ -252,6 +252,11 @@ h2 { margin: 0 0 .8rem; font-size: clamp(1.6rem, 3vw, 2.4rem); }
 
 .section-head { margin-bottom: 2rem; }
 .section-head p { color: hsl(var(--muted-foreground)); margin: 0; }
+
+.section-head p.eyebrow-accent {
+  color: hsl(var(--primary));
+}
+
 .grid { display: grid; gap: 1rem; }
 .grid.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .card { background: hsl(var(--card)); color: hsl(var(--card-foreground)); border: 1px solid hsl(var(--border)); border-radius: calc(var(--radius) + 6px); padding: 1.1rem; }
@@ -442,7 +447,7 @@ h2 { margin: 0 0 .8rem; font-size: clamp(1.6rem, 3vw, 2.4rem); }
 
 
 .consultancy-support {
-  background: hsl(var(--background));
+  /* inherits .section.alt background to match Client Feedback styling */
 }
 
 .consultancy-logos {
