@@ -411,6 +411,74 @@ code, pre, .mono {
 .page-stack { display: grid; gap: 1rem; }
 .grid.four { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 
+.case-studies-showcase {
+  padding: 4rem 0 6rem;
+}
+
+.showcase-stack {
+  display: grid;
+  gap: 2rem;
+}
+
+.showcase-card {
+  background: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+  border-radius: calc(var(--radius) + 4px);
+  overflow: hidden;
+}
+
+.showcase-inner {
+  padding: 2rem;
+}
+
+.showcase-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  margin-bottom: 1rem;
+}
+
+.showcase-tag {
+  background: hsl(var(--primary) / .1);
+  color: hsl(var(--primary));
+  border-radius: .375rem;
+  padding: .25rem .625rem;
+  font-size: .75rem;
+  font-weight: 500;
+}
+
+.showcase-title {
+  margin: 0 0 1.5rem;
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  line-height: 1.25;
+}
+
+.showcase-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.showcase-label {
+  margin: 0 0 .5rem;
+  font-size: .76rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .09em;
+  color: hsl(var(--muted-foreground));
+}
+
+.showcase-copy {
+  margin: 0 0 1.5rem;
+  font-size: .92rem;
+  line-height: 1.7;
+  color: hsl(var(--foreground) / .8);
+}
+
+.showcase-grid > div > .showcase-copy:last-child {
+  margin-bottom: 0;
+}
+
 .footer-row a { color: hsl(var(--muted-foreground)); text-decoration: none; }
 .footer-row a:hover { color: hsl(var(--foreground)); }
 
@@ -471,6 +539,8 @@ code, pre, .mono {
 
 @media (max-width: 860px) {
   .service-row { grid-template-columns: 1fr; gap: 1rem; }
+  .showcase-grid { grid-template-columns: 1fr; gap: 1.4rem; }
+  .showcase-inner { padding: 1.5rem; }
 }
 
 /* Footer utility classes */
