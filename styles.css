@@ -106,7 +106,7 @@ body {
   letter-spacing: -0.025em;
   display: inline-flex;
   align-items: center;
-  gap: .5rem;
+  gap: .35rem;
 }
 .logo-mark { width: 30px; height: 30px; object-fit: contain; }
 .logo span, .eyebrow, .step-num, .check-list li::before { color: hsl(var(--primary)); }
@@ -168,7 +168,7 @@ body {
 }
 
 .site-header .logo .gradient-text + span {
-  margin-left: -0.22rem;
+  margin-left: -0.35rem;
 }
 
 .hero { position: relative; min-height: 76vh; display: grid; align-items: center; color: hsl(var(--hero-foreground)); }
