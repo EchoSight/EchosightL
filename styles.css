@@ -128,7 +128,8 @@ body {
 }
 
 .site-header.on-hero .nav-links a {
-  color: hsl(var(--hero-foreground) / .75);
+  color: hsl(var(--hero-foreground) / .94);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
 }
 
 .site-header.on-hero .nav-links a:hover {
