@@ -309,8 +309,17 @@ h2 { margin: 0 0 .8rem; font-size: clamp(1.6rem, 3vw, 2.4rem); }
 .two-col { display: grid; gap: 1.2rem; grid-template-columns: 1.3fr 1fr; align-items: start; }
 .muted { color: hsl(var(--muted-foreground)); }
 .check-list { list-style: none; padding: 0; margin: 1rem 0 0; }
-.check-list li { margin: .45rem 0; }
-.check-list li::before { content: "✓ "; font-weight: 700; }
+.check-list li {
+  margin: .45rem 0;
+  display: flex;
+  align-items: flex-start;
+  gap: .5rem;
+}
+.check-icon {
+  color: hsl(var(--primary));
+  margin-top: .1rem;
+  flex-shrink: 0;
+}
 .example { background: hsl(var(--surface-warm)); border: 1px solid hsl(var(--border)); border-radius: calc(var(--radius) + 6px); padding: 1rem; color: hsl(var(--foreground)); }
 .tiny { margin-top: 0; font-size: .74rem; letter-spacing: .09em; text-transform: uppercase; color: hsl(var(--muted-foreground)); }
 .quote p { font-style: italic; margin-bottom: .6rem; }
@@ -391,6 +400,13 @@ code, pre, .mono {
   background: hsl(var(--card));
 }
 .service-row + .service-row { border-top: 1px solid hsl(var(--border)); }
+.service-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: .75rem;
+}
+.service-row .service-icon { color: hsl(var(--primary)); margin-bottom: 0; }
 .service-title {
   margin: 0 0 .6rem;
   font-size: clamp(1.3rem, 2.5vw, 1.8rem);
