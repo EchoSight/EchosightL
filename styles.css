@@ -755,3 +755,61 @@ code, pre, .mono {
     transform: translateY(10px);
   }
 }
+
+.faq-shell {
+  max-width: 56rem;
+}
+
+.faq-accordion {
+  display: grid;
+  gap: .75rem;
+}
+
+.faq-item {
+  background: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+  border-radius: calc(var(--radius) + 4px);
+  padding: 0 1.5rem;
+}
+
+.faq-item h3 {
+  margin: 0;
+}
+
+.faq-trigger {
+  width: 100%;
+  border: 0;
+  background: transparent;
+  color: hsl(var(--card-foreground));
+  font: inherit;
+  font-weight: 500;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .75rem;
+  padding: 1rem 0;
+  cursor: pointer;
+}
+
+.faq-trigger svg {
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+  transition: transform .2s ease;
+}
+
+.faq-trigger[aria-expanded="true"] svg {
+  transform: rotate(180deg);
+}
+
+.faq-panel {
+  overflow: hidden;
+  padding: 0 0 1rem;
+}
+
+.faq-panel p {
+  margin: 0;
+  color: hsl(var(--muted-foreground));
+  font-size: .95rem;
+}
