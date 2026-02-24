@@ -126,7 +126,7 @@ const createCookiePopup = () => {
     <div class="cookie-popup__card container">
       <p class="cookie-popup__text">
         We use cookies to improve your experience. See our
-        <a href="./privacy.html">privacy policy</a>
+        <a href="./privacy-policy.html">privacy policy</a>
         for details.
       </p>
       <div class="cookie-popup__actions">
