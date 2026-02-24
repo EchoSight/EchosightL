@@ -364,6 +364,26 @@ h2 { margin: 0 0 .8rem; font-size: clamp(1.6rem, 3vw, 2.4rem); }
   flex-shrink: 0;
 }
 .example { background: hsl(var(--surface-warm)); border: 1px solid hsl(var(--border)); border-radius: calc(var(--radius) + 6px); padding: 1rem; color: hsl(var(--foreground)); }
+.example-dark {
+  background: hsl(var(--accent));
+  border-color: hsl(var(--accent));
+  padding: 2rem;
+}
+.example-dark .tiny {
+  margin-bottom: 1rem;
+  color: hsl(var(--accent-foreground) / .4);
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  letter-spacing: .16em;
+}
+.example-output {
+  display: grid;
+  gap: .75rem;
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: .875rem;
+  color: hsl(var(--accent-foreground) / .7);
+}
+.example-output p { margin: 0; }
+.example-output span { color: hsl(var(--primary)); }
 
 .about-intro {
   gap: 3rem;
