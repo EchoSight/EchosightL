@@ -28,6 +28,50 @@ if (year) {
   year.textContent = new Date().getFullYear();
 }
 
+const accordionButtons = document.querySelectorAll("[data-accordion-button]");
+
+if (accordionButtons.length) {
+  const closeItem = (button) => {
+    const panelId = button.getAttribute("aria-controls");
+    const panel = panelId ? document.getElementById(panelId) : null;
+
+    button.setAttribute("aria-expanded", "false");
+
+    if (panel) {
+      panel.hidden = true;
+    }
+  };
+
+  const openItem = (button) => {
+    const panelId = button.getAttribute("aria-controls");
+    const panel = panelId ? document.getElementById(panelId) : null;
+
+    button.setAttribute("aria-expanded", "true");
+
+    if (panel) {
+      panel.hidden = false;
+    }
+  };
+
+  accordionButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const isExpanded = button.getAttribute("aria-expanded") === "true";
+
+      accordionButtons.forEach((otherButton) => {
+        if (otherButton !== button) {
+          closeItem(otherButton);
+        }
+      });
+
+      if (isExpanded) {
+        closeItem(button);
+      } else {
+        openItem(button);
+      }
+    });
+  });
+}
+
 if (contactForm && formMessage) {
   contactForm.addEventListener("submit", (event) => {
     event.preventDefault();
