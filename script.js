@@ -25,26 +25,6 @@ if (menuBtn && navLinks) {
 }
 
 
-const siteHeader = document.querySelector(".site-header");
-const heroSection = document.querySelector(".hero");
-
-const syncHeaderWithHero = () => {
-  if (!siteHeader || !heroSection) {
-    return;
-  }
-
-  const triggerPoint = heroSection.offsetTop + heroSection.offsetHeight - siteHeader.offsetHeight;
-  const isOnHero = window.scrollY < triggerPoint;
-
-  siteHeader.classList.toggle("on-hero", isOnHero);
-};
-
-if (siteHeader && heroSection) {
-  syncHeaderWithHero();
-  window.addEventListener("scroll", syncHeaderWithHero, { passive: true });
-  window.addEventListener("resize", syncHeaderWithHero);
-}
-
 if (year) {
   year.textContent = new Date().getFullYear();
 }
