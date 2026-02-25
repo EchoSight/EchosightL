@@ -431,9 +431,10 @@ h2 { margin: 0 0 .8rem; font-size: clamp(1.6rem, 3vw, 2.4rem); }
 .sample-output-video {
   --video-frame-tighten-vertical: 3.8%;
   --video-frame-tighten-horizontal: 0.35%;
-  --video-expanded-margin-block: 1.25rem;
-  --video-expanded-margin-inline: 1.25rem;
-  --video-expanded-height: calc(100% - (2 * var(--video-expanded-margin-block)));
+  --video-expanded-margin-block: 2.25rem;
+  --video-expanded-margin-inline: 0.75rem;
+  --video-expanded-height: min(74vh, calc(100% - (2 * var(--video-expanded-margin-block))));
+  --video-expanded-width: min(98vw, calc(100% - (2 * var(--video-expanded-margin-inline))));
   --video-expanded-object-fit: contain;
   --video-expanded-object-position: center;
   width: 100%;
@@ -447,10 +448,10 @@ h2 { margin: 0 0 .8rem; font-size: clamp(1.6rem, 3vw, 2.4rem); }
 
 .sample-output-video:fullscreen,
 .sample-output-video:-webkit-full-screen {
-  width: calc(100% - (2 * var(--video-expanded-margin-inline)));
+  width: var(--video-expanded-width);
   height: var(--video-expanded-height);
-  max-width: calc(100% - (2 * var(--video-expanded-margin-inline)));
-  max-height: calc(100% - (2 * var(--video-expanded-margin-block)));
+  max-width: var(--video-expanded-width);
+  max-height: var(--video-expanded-height);
   margin: var(--video-expanded-margin-block) var(--video-expanded-margin-inline);
   object-fit: var(--video-expanded-object-fit);
   object-position: var(--video-expanded-object-position);
