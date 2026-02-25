@@ -433,7 +433,7 @@ h2 { margin: 0 0 .8rem; font-size: clamp(1.6rem, 3vw, 2.4rem); }
   --video-frame-tighten-horizontal: 0.35%;
   --video-expanded-margin-block: 2.25rem;
   --video-expanded-margin-inline: 0.75rem;
-  --video-expanded-height: min(74vh, calc(100% - (2 * var(--video-expanded-margin-block))));
+  --video-expanded-height: min(62vh, calc(100% - (2 * var(--video-expanded-margin-block))));
   --video-expanded-width: min(98vw, calc(100% - (2 * var(--video-expanded-margin-inline))));
   --video-expanded-object-fit: contain;
   --video-expanded-object-position: center;
