@@ -711,10 +711,31 @@ code, pre, .mono {
   .lg\:px-8 { padding-left: 2rem; padding-right: 2rem; }
 }
 
+.pricing-group {
+  margin-bottom: 2.5rem;
+}
+.pricing-group:last-of-type {
+  margin-bottom: 0;
+}
+.pricing-group-head {
+  margin-bottom: 1rem;
+}
+.pricing-group-head h2 {
+  margin: .35rem 0 0;
+  font-size: clamp(1.35rem, 2.4vw, 1.75rem);
+}
+.pricing-group-head .eyebrow {
+  margin: 0;
+}
+
 .pricing-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 1rem;
+}
+
+.pricing-grid-hourly {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 .pricing-card {
   position: relative;
@@ -834,9 +855,11 @@ code, pre, .mono {
 
 @media (max-width: 1000px) {
   .pricing-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .pricing-grid-hourly { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (max-width: 860px) {
-  .pricing-grid { grid-template-columns: 1fr; }
+  .pricing-grid,
+  .pricing-grid-hourly { grid-template-columns: 1fr; }
 }
 
 .cookie-popup {
