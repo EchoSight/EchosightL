@@ -951,6 +951,7 @@ code, pre, .mono {
 .text-2xl { font-size: 1.5rem; line-height: 2rem; }
 .mb-6 { margin-bottom: 1.5rem; }
 .space-y-5 > :not([hidden]) ~ :not([hidden]) { margin-top: 1.25rem; }
+.space-y-4 > :not([hidden]) ~ :not([hidden]) { margin-top: 1rem; }
 .space-y-2 > :not([hidden]) ~ :not([hidden]) { margin-top: .5rem; }
 .gap-5 { gap: 1.25rem; }
 .leading-none { line-height: 1; }
@@ -979,6 +980,18 @@ code, pre, .mono {
 .min-h-\[80px\] { min-height: 80px; }
 .hover\:bg-primary\/90:hover { background-color: hsl(var(--primary) / .9); }
 .ml-1 { margin-left: .25rem; }
+
+.contact-detail-item svg {
+  flex-shrink: 0;
+}
+
+.contact-detail-item p {
+  margin: 0;
+}
+
+.contact-detail-item p + p {
+  margin-top: .25rem;
+}
 
 @media (min-width: 640px) {
   .sm\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
