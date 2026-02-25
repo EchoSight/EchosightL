@@ -901,6 +901,11 @@ code, pre, .mono {
   color: hsl(var(--hero-foreground));
 }
 
+.cta-band .btn {
+  display: inline-flex;
+  margin-top: 1.75rem;
+}
+
 @media (max-width: 1000px) {
   .pricing-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .pricing-grid-hourly { grid-template-columns: repeat(2, minmax(0, 1fr)); }
