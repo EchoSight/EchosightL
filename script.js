@@ -6,6 +6,12 @@ const contactForm = document.getElementById("contactForm");
 const formMessage = document.getElementById("formMessage");
 
 const root = document.documentElement;
+const autoRedirectTarget = document.body?.dataset?.autoRedirect;
+
+if (autoRedirectTarget) {
+  window.location.replace(autoRedirectTarget);
+}
+
 const savedTheme = localStorage.getItem("theme");
 const cookieConsentKey = "cookieConsent";
 
