@@ -76,8 +76,34 @@ if (accordionButtons.length) {
 if (contactForm && formMessage) {
   contactForm.addEventListener("submit", (event) => {
     event.preventDefault();
-    formMessage.textContent = "Thanks — we’ll get back to you within one business day.";
-    contactForm.reset();
+
+    const formData = new FormData(contactForm);
+    const serviceField = contactForm.querySelector("#service");
+    const selectedService = serviceField?.selectedOptions?.[0]?.textContent?.trim();
+    const serviceValue = formData.get("service");
+
+    const details = [
+      ["Name", formData.get("name")],
+      ["Company", formData.get("company")],
+      ["Email", formData.get("email")],
+      ["Phone", formData.get("phone")],
+      ["Service", serviceValue ? selectedService || serviceValue : ""],
+      ["Site postcode", formData.get("postcode")],
+      ["Preferred dates", formData.get("dates")],
+      ["Project details", formData.get("notes")],
+    ]
+      .filter(([, value]) => value && String(value).trim().length)
+      .map(([label, value]) => `${label}: ${String(value).trim()}`)
+      .join("\n");
+
+    const senderName = String(formData.get("name") || "Website enquiry").trim();
+    const recipientEmail = "jack.curry@echosight.co.uk";
+    const subject = `New EchoSight enquiry from ${senderName}`;
+    const body = `Hello EchoSight,\n\nPlease find my enquiry details below:\n\n${details}\n\nThanks,\n${senderName}`;
+    const mailtoUrl = `mailto:${recipientEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+    window.open(mailtoUrl, "_self");
+    formMessage.textContent = "Your email app should open with your enquiry pre-filled. If it doesn't, please email jack.curry@echosight.co.uk.";
   });
 }
 
