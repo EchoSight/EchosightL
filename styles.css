@@ -429,8 +429,8 @@ h2 { margin: 0 0 .8rem; font-size: clamp(1.6rem, 3vw, 2.4rem); }
 }
 
 .sample-output-video {
-  --video-frame-tighten-vertical: 3.8%;
-  --video-frame-tighten-horizontal: 0.35%;
+  --video-frame-tighten-vertical: 5%;
+  --video-frame-tighten-horizontal: 0.8%;
   --video-expanded-margin-block: 1.25rem;
   --video-expanded-margin-inline: 1.25rem;
   width: 100%;
