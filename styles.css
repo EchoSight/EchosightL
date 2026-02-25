@@ -429,12 +429,15 @@ h2 { margin: 0 0 .8rem; font-size: clamp(1.6rem, 3vw, 2.4rem); }
 }
 
 .sample-output-video {
+  --video-frame-tighten-vertical: 3.8%;
+  --video-frame-tighten-horizontal: 0.35%;
   width: 100%;
   display: block;
   border-radius: calc(var(--radius) + 2px);
   border: 1px solid hsl(var(--accent-foreground) / .18);
   background: hsl(0 0% 0% / .35);
   box-shadow: 0 18px 40px hsl(0 0% 0% / .35);
+  clip-path: inset(var(--video-frame-tighten-vertical) var(--video-frame-tighten-horizontal));
 }
 
 .sample-output-figure figcaption {
