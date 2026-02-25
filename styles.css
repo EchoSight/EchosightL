@@ -429,10 +429,13 @@ h2 { margin: 0 0 .8rem; font-size: clamp(1.6rem, 3vw, 2.4rem); }
 }
 
 .sample-output-video {
-  --video-frame-tighten-vertical: 5%;
-  --video-frame-tighten-horizontal: 0.8%;
+  --video-frame-tighten-vertical: 3.8%;
+  --video-frame-tighten-horizontal: 0.35%;
   --video-expanded-margin-block: 1.25rem;
   --video-expanded-margin-inline: 1.25rem;
+  --video-expanded-height: calc(100% - (2 * var(--video-expanded-margin-block)));
+  --video-expanded-object-fit: contain;
+  --video-expanded-object-position: center;
   width: 100%;
   display: block;
   border-radius: calc(var(--radius) + 2px);
@@ -445,11 +448,12 @@ h2 { margin: 0 0 .8rem; font-size: clamp(1.6rem, 3vw, 2.4rem); }
 .sample-output-video:fullscreen,
 .sample-output-video:-webkit-full-screen {
   width: calc(100% - (2 * var(--video-expanded-margin-inline)));
-  height: calc(100% - (2 * var(--video-expanded-margin-block)));
+  height: var(--video-expanded-height);
   max-width: calc(100% - (2 * var(--video-expanded-margin-inline)));
   max-height: calc(100% - (2 * var(--video-expanded-margin-block)));
   margin: var(--video-expanded-margin-block) var(--video-expanded-margin-inline);
-  object-fit: contain;
+  object-fit: var(--video-expanded-object-fit);
+  object-position: var(--video-expanded-object-position);
   box-sizing: border-box;
 }
 
