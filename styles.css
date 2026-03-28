@@ -326,6 +326,10 @@ h2 { margin: 0 0 .8rem; font-size: clamp(1.6rem, 3vw, 2.4rem); }
   object-fit: contain;
 }
 
+.partner-logo-card--ebd img {
+  transform: translateY(-6px);
+}
+
 .grid { display: grid; gap: 1rem; }
 .grid.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .card { background: hsl(var(--card)); color: hsl(var(--card-foreground)); border: 1px solid hsl(var(--border)); border-radius: calc(var(--radius) + 6px); padding: 1.1rem; }
